@@ -6,7 +6,7 @@
 ## Run in local
 ```
 git clone https://github.com/b06608062/todo-list-react.git
-cd todo-list-react
+cd ./todo-list-react
 yarn install
 yarn start
 ```
