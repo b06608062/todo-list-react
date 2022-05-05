@@ -68,29 +68,29 @@ class App extends Component {
         const { left, completed } = this.countItem(todo_items);
         return (
             <>
-            <header className="todo-app__header">
-                <h1 className="todo-app__title">todos</h1>
-            </header>
+                <header className="todo-app__header">
+                    <h1 className="todo-app__title">todos</h1>
+                </header>
 
-            <section className="todo-app__main">
-                <input className="todo-app__input" placeholder="What needs to be done?" onKeyDown={this.addItem}></input>
-                <ul className="todo-app__list" id="todo-list">
-                    {this.displayIetm(todo_items, mode)}
-                </ul>
-            </section>
+                <section className="todo-app__main">
+                    <input className="todo-app__input" placeholder="What needs to be done?" onKeyDown={this.addItem}></input>
+                    <ul className="todo-app__list" id="todo-list">
+                        {this.displayIetm(todo_items, mode)}
+                    </ul>
+                </section>
 
-            {todo_items.length === 0 ? <></> :
-            <footer className="todo-app__footer" id="todo-footer">
-                <div className="todo-app__total">{left} left</div>
-                <ul className="todo-app__view-buttons">
-                    <Button name="All" mode={0} setMode={this.setMode}/>
-                    <Button name="Active" mode={1} setMode={this.setMode}/>
-                    <Button name="Completed" mode={2} setMode={this.setMode}/>
-                </ul>
-                <div className="todo-app__clean">
-                    {completed > 0 ? <button onClick={this.clearCompleted}>Clear Completed</button> : <button style={{ visibility: "hidden" }}>Clear Completed</button>}
-                </div>
-            </footer>}
+                {todo_items.length === 0 ? <></> :
+                <footer className="todo-app__footer" id="todo-footer">
+                    <div className="todo-app__total">{left} left</div>
+                    <ul className="todo-app__view-buttons">
+                        <Button name="All" mode={0} setMode={this.setMode}/>
+                        <Button name="Active" mode={1} setMode={this.setMode}/>
+                        <Button name="Completed" mode={2} setMode={this.setMode}/>
+                    </ul>
+                    <div className="todo-app__clean">
+                        {completed > 0 ? <button onClick={this.clearCompleted}>Clear Completed</button> : <button style={{ visibility: "hidden" }}>Clear Completed</button>}
+                    </div>
+                </footer>}
             </>
         );
     }
