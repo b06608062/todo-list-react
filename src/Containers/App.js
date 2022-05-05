@@ -80,17 +80,17 @@ class App extends Component {
             </section>
 
             {todo_items.length === 0 ? <></> :
-                <footer className="todo-app__footer" id="todo-footer">
-                    <div className="todo-app__total">{left} left</div>
-                    <ul className="todo-app__view-buttons">
-                        <Button name="All" mode={0} setMode={this.setMode}/>
-                        <Button name="Active" mode={1} setMode={this.setMode}/>
-                        <Button name="Completed" mode={2} setMode={this.setMode}/>
-                    </ul>
-                    <div className="todo-app__clean">
-                        {completed > 0 ? <button onClick={this.clearCompleted}>Clear Completed</button> : <button style={{ visibility: "hidden" }}>Clear Completed</button>}
-                    </div>
-                </footer>
+            <footer className="todo-app__footer" id="todo-footer">
+                <div className="todo-app__total">{left} left</div>
+                <ul className="todo-app__view-buttons">
+                    <Button name="All" mode={0} setMode={this.setMode}/>
+                    <Button name="Active" mode={1} setMode={this.setMode}/>
+                    <Button name="Completed" mode={2} setMode={this.setMode}/>
+                </ul>
+                <div className="todo-app__clean">
+                    {completed > 0 ? <button onClick={this.clearCompleted}>Clear Completed</button> : <button style={{ visibility: "hidden" }}>Clear Completed</button>}
+                </div>
+            </footer>
             }
             </>
         );
