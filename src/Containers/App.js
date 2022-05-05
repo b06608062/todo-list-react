@@ -90,8 +90,7 @@ class App extends Component {
                 <div className="todo-app__clean">
                     {completed > 0 ? <button onClick={this.clearCompleted}>Clear Completed</button> : <button style={{ visibility: "hidden" }}>Clear Completed</button>}
                 </div>
-            </footer>
-            }
+            </footer>}
             </>
         );
     }
