@@ -15,6 +15,6 @@ class Item extends React.Component {
             </li>
         );
     }
-}
+};
 
 export default Item;
